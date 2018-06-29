@@ -10,13 +10,13 @@ public class LoadDriver {
 
         }
     }
-    //rivate LoadDriver(){}
+    //private LoadDriver(){}
      public static Connection newInstance(String user,String password,String database) throws SQLException{
         if (user == null || password == null || database == null) {
             return null;
         }
         Connection conn =null;
-        String urlModel = "jdbc:mysql://39.108.56.6:3306/%s"+"user=root%s&password=root%s"+"" +
+        String urlModel = "jdbc:mysql://39.108.56.6:3306/%s"+"user=root%s&password=root%s"+
                 "&useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&useSSL=false";
         try{
             conn =DriverManager.getConnection(
@@ -28,7 +28,7 @@ public class LoadDriver {
         }
         return conn;
     }
-    Statement stmt = null;
+    /*Statement stmt = null;
     ResultSet rs = null;
     try{
         stmt = conn.createStatement();
@@ -38,5 +38,5 @@ public class LoadDriver {
         }
     }catch(SQLException ex){
         System.out.println("SQLException:"+ex.getMessage());
-    }
+    }*/
 }
