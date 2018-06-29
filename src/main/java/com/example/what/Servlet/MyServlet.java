@@ -1,4 +1,4 @@
-package com.example.what;
+package com.example.what.Servlet;
 
 import javax.servlet.*;
 import javax.swing.text.Document;

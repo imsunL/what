@@ -5,7 +5,9 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-
+/*
+* 连接池
+* */
 public class MyServletJspOrEjb {
     public void doSomething() throws Exception{
         InitialContext ctx = new InitialContext();

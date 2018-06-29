@@ -1,6 +1,7 @@
 package com.example.what.JDBC;
 
 import java.sql.*;
+///数据库连接
 
 public class LoadDriver {
     public static void main(String[] args){
@@ -16,7 +17,7 @@ public class LoadDriver {
             return null;
         }
         Connection conn =null;
-        String urlModel = "jdbc:mysql://39.108.56.6:3306/%s"+"user=root%s&password=root%s"+
+        String urlModel = "jdbc:mysql://localhost/%s"+"user=root%s&password=root%s"+
                 "&useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&useSSL=false";
         try{
             conn =DriverManager.getConnection(
