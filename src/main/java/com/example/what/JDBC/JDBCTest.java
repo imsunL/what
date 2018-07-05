@@ -12,7 +12,7 @@ public class JDBCTest {
     //用户名
     public final static String USERNAME = "root";
     //密码
-    public final static String PASSWORD = "smyh";
+    public final static String PASSWORD = "root";
     //驱动类
     public final static String DRIVER = "com.mysql.jdbc.Driver";
 

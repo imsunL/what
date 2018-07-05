@@ -1,10 +1,11 @@
 package com.example.what.JSON;
 
-import jdk.internal.org.objectweb.asm.Handle;
 import jdk.nashorn.internal.runtime.JSONListAdapter;
 
 import javax.naming.Context;
 import javax.swing.text.html.ListView;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.logging.Handler;
 
 public class Httpjson extends Thread{
@@ -16,5 +17,22 @@ public class Httpjson extends Thread{
 
     public Httpjson(String url,ListView listView,JSONListAdapter jsonListAdapter,Handler handler){
         super();
+        this.url = url;
+        this.listView = listView;
+        this.jsonListAdapter = jsonListAdapter;
+        this.handler = handler;
+
     }
+
+    @Override
+    public void run(){
+        URL httpUrl;
+        try {
+            httpUrl = new URL(url);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }
